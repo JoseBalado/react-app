@@ -1,13 +1,16 @@
 import React from 'react';
 import axios from 'axios';
 
+import Detail from './Detail.jsx'
+
 class Content extends React.Component {
    constructor(props) {
       super(props);
 
       this.state = {
          message: 'List of beers',
-         beers: []
+         beers: [],
+         selectedBeer: {}
       }
 
       this.showInfo = this.showInfo.bind(this);
@@ -17,9 +20,8 @@ class Content extends React.Component {
    showInfo(id) {
       // this.setState({isLoggedIn: true});
       console.log('showInfo: id', id)
-      console.log(
-      this.state.beers.filter(beer => beer.id === id)[0]
-      )
+      console.log(this.state.beers.filter(beer => beer.id === id)[0])
+      this.setState({ selectedBeer: this.state.beers.filter(beer => beer.id === id)[0] })
     }
 
   async componentDidMount() {
@@ -46,6 +48,7 @@ class Content extends React.Component {
                {beer.name}
                <button onClick={(e) => this.showInfo(beer.id, e)}>Show info</button>
             </div>)}
+            <Detail name={this.state.selectedBeer.name}></Detail>
          </div>
       );
    }
