@@ -48,7 +48,11 @@ class Content extends React.Component {
                {beer.name}
                <button onClick={(e) => this.showInfo(beer.id, e)}>Show info</button>
             </div>)}
-            <Detail name={this.state.selectedBeer.name}></Detail>
+            <Detail
+               name={this.state.selectedBeer.name}
+               description={this.state.selectedBeer.description}
+               imageUrl={this.state.selectedBeer.image_url}
+            ></Detail>
          </div>
       );
    }
