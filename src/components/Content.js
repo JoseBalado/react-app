@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-import Detail from './Detail.jsx'
+import Detail from './Detail.js'
 
 class Content extends React.Component {
    constructor(props) {

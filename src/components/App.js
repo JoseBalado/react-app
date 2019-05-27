@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from './Header.jsx'
-import Content from './Content.jsx'
+import Header from './Header.js'
+import Content from './Content.js'
 
 class App extends React.Component {
    render() {
@@ -12,6 +12,5 @@ class App extends React.Component {
       );
    }
 }
-
 
 export default App;
