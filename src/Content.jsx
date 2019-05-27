@@ -9,7 +9,18 @@ class Content extends React.Component {
          message: 'List of beers',
          beers: []
       }
+
+      this.showInfo = this.showInfo.bind(this);
+
    }
+
+   showInfo(id) {
+      // this.setState({isLoggedIn: true});
+      console.log('showInfo: id', id)
+      console.log(
+      this.state.beers.filter(beer => beer.id === id)[0]
+      )
+    }
 
   async componentDidMount() {
      try {
@@ -31,7 +42,10 @@ class Content extends React.Component {
             <h2>Content</h2>
             <p>The content text!!!</p>
             <p>{this.state.message}</p>
-            {this.state.beers.map(beer => <div key={beer.id}>{beer.name}</div>)}
+            {this.state.beers.map(beer => <div key={beer.id}>
+               {beer.name}
+               <button onClick={(e) => this.showInfo(beer.id, e)}>Show info</button>
+            </div>)}
          </div>
       );
    }
