@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { addBeer } from '../actions';
 
 import AddBeer from './AddBeer.js';
-import TodoList from './TodoList.js';
+import FavoriteList from './FavoriteList.js';
 
 class FavoriteBeers extends React.Component {
    render() {
@@ -14,7 +14,7 @@ class FavoriteBeers extends React.Component {
          <div>
             <h1>Favorite Beers</h1>
             <AddBeer onAddClick = {text =>dispatch(addBeer(text))} />
-            <TodoList todos = {visibleTodos}/>
+            <FavoriteList todos = {visibleTodos}/>
          </div>
       );
    }

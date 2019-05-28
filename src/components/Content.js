@@ -6,7 +6,6 @@ import { connect } from 'react-redux'
 import { addBeer } from '../actions'
 
 import AddBeer from './AddBeer.js'
-import TodoList from './TodoList.js'
 
 class Content extends React.Component {
    constructor(props) {
@@ -65,8 +64,6 @@ class Content extends React.Component {
                   {beer.name}
                </Link>
             </div>)}
-            <AddBeer onAddClick = {text =>dispatch(addBeer(text))} />
-            <TodoList todos = {visibleTodos}/>
          </div>
       );
    }
