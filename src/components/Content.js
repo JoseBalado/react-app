@@ -47,7 +47,12 @@ class Content extends React.Component {
             {this.state.beers.map(beer => <div key={beer.id}>
                {beer.name}
                <button onClick={(e) => this.showInfo(beer.id, e)}>Show info</button>
-               <Link to={`/detail/${beer.id}`}>{beer.name}</Link>
+               <Link to={{
+                  pathname: `/detail/${beer.id}`,
+                  state: {
+                     beer: beer
+                  }
+               }}>{beer.name}</Link>
             </div>)}
             <Detail
                name={this.state.selectedBeer.name}

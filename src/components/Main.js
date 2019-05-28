@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Content from './Content.js'
-import Detail from './Detail'
+import Detail from './BeerDetail'
 
 const Main = () => (
     <main>
