@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
-import Todo from './Todo.js'
+import Beer from './Beer.js'
 
-export default class TodoList extends Component {
+export default class FavoriteList extends Component {
    render() {
       return (
          <ul>
-            {this.props.todos.map(todo =>
-               <Todo
-                  key = {todo.id}
-                  {...todo}
+            {this.props.todos.map(beer =>
+               <Beer
+                  key = {beer.id}
+                  {...beer}
                />
             )}
          </ul>

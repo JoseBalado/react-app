@@ -1,9 +1,6 @@
 import React from 'react';
 
 import { connect } from 'react-redux';
-import { addBeer } from '../actions';
-
-import AddBeer from './AddBeer.js';
 import FavoriteList from './FavoriteList.js';
 
 class FavoriteBeers extends React.Component {
@@ -13,7 +10,6 @@ class FavoriteBeers extends React.Component {
       return (
          <div>
             <h1>Favorite Beers</h1>
-            <AddBeer onAddClick = {text =>dispatch(addBeer(text))} />
             <FavoriteList todos = {visibleTodos}/>
          </div>
       );

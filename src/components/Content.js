@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { addBeer } from '../actions'
 
-import AddBeer from './AddBeer.js'
-
 class Content extends React.Component {
    constructor(props) {
       super(props);
@@ -46,7 +44,7 @@ class Content extends React.Component {
     }
 
    render() {
-      const { dispatch, visibleTodos } = this.props
+      const { dispatch } = this.props
       return (
          <div>
             <h2>Content</h2>
@@ -69,10 +67,10 @@ class Content extends React.Component {
    }
 }
 
-function select(state) {
-   return {
-      visibleTodos: state.todos
-   }
-}
+// function select(state) {
+//    return {
+//       visibleTodos: state.todos
+//    }
+// }
 
-export default connect(select)(Content);
+export default connect()(Content);
