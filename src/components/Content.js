@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom'
-import Detail from './Detail.js'
 
 class Content extends React.Component {
    constructor(props) {
@@ -54,11 +53,6 @@ class Content extends React.Component {
                   }
                }}>{beer.name}</Link>
             </div>)}
-            <Detail
-               name={this.state.selectedBeer.name}
-               description={this.state.selectedBeer.description}
-               imageUrl={this.state.selectedBeer.image_url}
-            ></Detail>
          </div>
       );
    }
