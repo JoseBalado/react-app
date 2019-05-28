@@ -9,7 +9,7 @@ class Content extends React.Component {
       this.state = {
          message: 'List of beers',
          beers: [],
-         selectedBeer: {}
+         favoriteBeers: []
       }
 
       this.favoriteBeer = this.favoriteBeer.bind(this);
@@ -17,10 +17,14 @@ class Content extends React.Component {
    }
 
    favoriteBeer(id) {
-      // this.setState({isLoggedIn: true});
       console.log('showInfo: id', id)
       console.log(this.state.beers.filter(beer => beer.id === id)[0])
-      this.setState({ selectedBeer: this.state.beers.filter(beer => beer.id === id)[0] })
+
+      this.setState({
+         favoriteBeers: this.state.favoriteBeers.concat(this.state.beers.filter(beer => beer.id === id)[0])
+      });
+
+      console.log(this.state.favoriteBeers);
     }
 
   async componentDidMount() {
@@ -45,7 +49,7 @@ class Content extends React.Component {
             <p>{this.state.message}</p>
             {this.state.beers.map(beer => <div key={beer.id}>
                {beer.name}
-               <button onClick={(e) => this.showInfo(beer.id, e)}>Favorite Beer</button>
+               <button onClick={(e) => this.favoriteBeer(beer.id, e)}>Favorite Beer</button>
                <Link 
                   to={{
                      pathname: `/detail/${beer.id}`,
