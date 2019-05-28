@@ -12,11 +12,11 @@ class Content extends React.Component {
          selectedBeer: {}
       }
 
-      this.showInfo = this.showInfo.bind(this);
+      this.favoriteBeer = this.favoriteBeer.bind(this);
 
    }
 
-   showInfo(id) {
+   favoriteBeer(id) {
       // this.setState({isLoggedIn: true});
       console.log('showInfo: id', id)
       console.log(this.state.beers.filter(beer => beer.id === id)[0])
@@ -45,13 +45,15 @@ class Content extends React.Component {
             <p>{this.state.message}</p>
             {this.state.beers.map(beer => <div key={beer.id}>
                {beer.name}
-               <button onClick={(e) => this.showInfo(beer.id, e)}>Show info</button>
-               <Link to={{
-                  pathname: `/detail/${beer.id}`,
-                  state: {
+               <button onClick={(e) => this.showInfo(beer.id, e)}>Favorite Beer</button>
+               <Link 
+                  to={{
+                     pathname: `/detail/${beer.id}`,
+                     state: {
                      beer: beer
-                  }
-               }}>{beer.name}</Link>
+                  }}}>
+                  {beer.name}
+               </Link>
             </div>)}
          </div>
       );
