@@ -3,9 +3,9 @@ import axios from 'axios';
 import { Link } from 'react-router-dom'
 
 import { connect } from 'react-redux'
-import { addTodo } from '../actions'
+import { addBeer } from '../actions'
 
-import AddTodo from './AddTodo.js'
+import AddBeer from './AddBeer.js'
 import TodoList from './TodoList.js'
 
 class Content extends React.Component {
@@ -65,7 +65,7 @@ class Content extends React.Component {
                   {beer.name}
                </Link>
             </div>)}
-            <AddTodo onAddClick = {text =>dispatch(addTodo(text))} />
+            <AddBeer onAddClick = {text =>dispatch(addBeer(text))} />
             <TodoList todos = {visibleTodos}/>
          </div>
       );

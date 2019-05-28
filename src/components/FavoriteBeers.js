@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { connect } from 'react-redux'
-import { addTodo } from '../actions'
+import { connect } from 'react-redux';
+import { addBeer } from '../actions';
 
-import AddTodo from './AddTodo.js'
-import TodoList from './TodoList.js'
+import AddBeer from './AddBeer.js';
+import TodoList from './TodoList.js';
 
 class FavoriteBeers extends React.Component {
    render() {
@@ -13,7 +13,7 @@ class FavoriteBeers extends React.Component {
       return (
          <div>
             <h1>Favorite Beers</h1>
-            <AddTodo onAddClick = {text =>dispatch(addTodo(text))} />
+            <AddBeer onAddClick = {text =>dispatch(addBeer(text))} />
             <TodoList todos = {visibleTodos}/>
          </div>
       );
