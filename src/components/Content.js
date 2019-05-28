@@ -13,7 +13,6 @@ class Content extends React.Component {
       }
 
       this.favoriteBeer = this.favoriteBeer.bind(this);
-
    }
 
    favoriteBeer(id) {
