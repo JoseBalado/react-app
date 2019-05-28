@@ -6,11 +6,10 @@ import FavoriteList from './FavoriteList.js';
 class FavoriteBeers extends React.Component {
    render() {
       const { dispatch, visibleTodos } = this.props
-      console.log(this.props)
       return (
          <div>
             <h1>Favorite Beers</h1>
-            <FavoriteList todos = {visibleTodos}/>
+            <FavoriteList todos={visibleTodos} dispatch={dispatch}/>
          </div>
       );
    }
