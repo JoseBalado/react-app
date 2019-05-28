@@ -2,6 +2,12 @@ import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom'
 
+import { connect } from 'react-redux'
+import { addTodo } from '../actions'
+
+import AddTodo from './AddTodo.js'
+import TodoList from './TodoList.js'
+
 class Content extends React.Component {
    constructor(props) {
       super(props);
@@ -41,6 +47,7 @@ class Content extends React.Component {
     }
 
    render() {
+      const { dispatch, visibleTodos } = this.props
       return (
          <div>
             <h2>Content</h2>
@@ -58,9 +65,17 @@ class Content extends React.Component {
                   {beer.name}
                </Link>
             </div>)}
+            <AddTodo onAddClick = {text =>dispatch(addTodo(text))} />
+            <TodoList todos = {visibleTodos}/>
          </div>
       );
    }
 }
 
-export default Content;
+function select(state) {
+   return {
+      visibleTodos: state.todos
+   }
+}
+
+export default connect(select)(Content);
