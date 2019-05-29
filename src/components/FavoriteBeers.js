@@ -15,10 +15,10 @@ class FavoriteBeers extends React.Component {
    }
 }
 
-function select(state) {
+function mapStateToProps(state) {
    return {
       favoriteBeers: state.beers
    }
 }
 
-export default connect(select)(FavoriteBeers);
+export default connect(mapStateToProps)(FavoriteBeers);
