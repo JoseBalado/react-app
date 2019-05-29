@@ -3,11 +3,11 @@ import { addBeer } from '../actions'
 
 export default class Beer extends Component {
    render() {
-      console.log(this.props)
+      console.log('beer component:', this.props)
       return (
          <li>
-            {this.props.text}
-            <button onClick={(e) => this.props.dispatch(addBeer('beer.name'))}>Remove Beer</button>
+            {this.props.name}
+            <button onClick={(e) => this.props.dispatch(addBeer(this.props.id))}>Remove Beer</button>
          </li>
       )
    }

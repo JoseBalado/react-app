@@ -2,23 +2,18 @@ import { combineReducers } from 'redux'
 import { ADD_BEER } from './actions'
 import { REMOVE_BEER } from './actions'
 
-function beer(state, action) {
-   switch (action.type) {
-      case ADD_BEER:
-         return {
-            id: action.id,
-            text: action.text,
-         }
-      default:
-         return state
-   }
-}
 function beers(state = [], action) {
+   console.log('state',
+      [
+            ...state,
+            action.beer
+         ]
+   )
    switch (action.type) {
       case ADD_BEER:
          return [
             ...state,
-            beer(undefined, action)
+            action.beer
          ]
       default:
          return state
@@ -30,7 +25,7 @@ function removeBeer(state, action) {
       case REMOVE_BEER:
          return [
             ...state,
-            beer(undefined, action)
+           action
          ]
       default:
          return state
