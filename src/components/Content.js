@@ -31,7 +31,6 @@ class Content extends React.Component {
          <div>
             <h2>{this.state.message}</h2>
             {this.state.beers.map(beer => <div key={beer.id}>
-
                <div class="container">
                   <div class="row">
                      <div class="col-sm">

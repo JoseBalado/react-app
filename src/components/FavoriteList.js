@@ -4,7 +4,7 @@ import Beer from './Beer.js';
 export default class FavoriteList extends Component {
    render() {
       return (
-         <ul>
+         <div class="container">
             {this.props.beers.map(beer =>
                <Beer
                   key = {beer.id}
@@ -12,7 +12,7 @@ export default class FavoriteList extends Component {
                   dispatch={this.props.dispatch}
                />
             )}
-         </ul>
+         </div>
       )
    }
 }
