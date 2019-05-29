@@ -7,8 +7,8 @@ class FavoriteBeers extends React.Component {
    render() {
       const { dispatch, favoriteBeers } = this.props
       return (
-         <div>
-            <h2>Favorite Beers</h2>
+         <div className="container">
+            <h4>Favorite Beers</h4>
             <FavoriteList beers={favoriteBeers} dispatch={dispatch}/>
          </div>
       );
