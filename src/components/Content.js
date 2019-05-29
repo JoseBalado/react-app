@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom'
 
 import { connect } from 'react-redux'
-import { addBeer } from '../actions'
+import { addBeer } from '../store/actions'
 
 class Content extends React.Component {
    constructor(props) {

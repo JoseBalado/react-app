@@ -9,7 +9,7 @@ import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-import beerApp from './reducers'
+import beerApp from './store/reducers'
 const store = createStore(beerApp)
 
 render((
