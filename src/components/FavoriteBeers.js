@@ -7,7 +7,7 @@ class FavoriteBeers extends React.Component {
    render() {
       const { dispatch, favoriteBeers } = this.props
       return (
-         <div class="container">
+         <div className="container">
             <h4>Favorite Beers</h4>
             {favoriteBeers.map(beer =>
                <Beer
