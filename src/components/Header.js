@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 
 const Header = () => (
-  <header>
+  <header className="container">
     <nav>
       <ul className="nav">
         <li className="nav-item">
