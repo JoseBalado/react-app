@@ -4,9 +4,13 @@ import { Link } from 'react-router-dom'
 const Header = () => (
   <header>
     <nav>
-      <ul>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/favorites'>Favorite Beers</Link></li>
+      <ul className="nav">
+        <li class="nav-item">
+          <Link className="nav-link" to='/'>Home</Link>
+        </li>
+        <li class="nav-item">
+          <Link className="nav-link" to='/favorites'>Favorite Beers</Link>
+        </li>
       </ul>
     </nav>
   </header>
