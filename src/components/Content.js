@@ -34,12 +34,13 @@ class Content extends React.Component {
                {beer.name}
                <button className="btn btn-primary btn-sm" onClick={(e) => dispatch(addBeer({ id: beer.id, name: beer.name}))}>Favorite Beer</button>
                <Link 
+                  className="btn btn-outline-info btn-sm"
                   to={{
                      pathname: `/detail/${beer.id}`,
                      state: {
                      beer: beer
                   }}}>
-                  {beer.name}
+                 Detailed info
                </Link>
             </div>)}
          </div>
