@@ -15,9 +15,8 @@ export default class Beer extends Component {
                >
                   Remove Beer
                </button>
-               <div className="col">
-                  {this.props.name}
-               </div>
+            </div>
+            <div className="col">
             </div>
        </div>
       )
