@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { addBeer } from '../actions'
+import { removeBeer } from '../actions'
 
 export default class Beer extends Component {
    render() {
@@ -7,7 +7,7 @@ export default class Beer extends Component {
       return (
          <li>
             {this.props.name}
-            <button onClick={(e) => this.props.dispatch(addBeer(this.props.id))}>Remove Beer</button>
+            <button onClick={(e) => this.props.dispatch(removeBeer(this.props.id))}>Remove Beer</button>
          </li>
       )
    }
