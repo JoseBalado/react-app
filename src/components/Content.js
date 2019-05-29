@@ -17,7 +17,7 @@ class Content extends React.Component {
 
    async componentDidMount() {
       try {
-         const res = await axios.get(`https://api.punkapi.com/v2/beers`)
+         const res = await axios.get(`https://api.punkapi.com/v2/beers`);
          const beers = res.data;
          this.setState({ beers });
       } catch (error) {
