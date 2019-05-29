@@ -5,7 +5,7 @@ class Detail extends React.Component {
       const beer = this.props.location.state.beer
       return (
          <div>
-            <h1>Detail Beer</h1>
+            <h2>Beer Detail</h2>
             <p>{beer.name}</p>
             <p>{beer.description}</p>
             <img src={beer.image_url} alt="beer" />
