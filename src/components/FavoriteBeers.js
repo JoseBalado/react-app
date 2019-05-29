@@ -5,11 +5,11 @@ import FavoriteList from './FavoriteList.js';
 
 class FavoriteBeers extends React.Component {
    render() {
-      const { dispatch, visibleTodos } = this.props
+      const { dispatch, favoriteBeers } = this.props
       return (
          <div>
             <h1>Favorite Beers</h1>
-            <FavoriteList todos={visibleTodos} dispatch={dispatch}/>
+            <FavoriteList beers={favoriteBeers} dispatch={dispatch}/>
          </div>
       );
    }
@@ -17,7 +17,7 @@ class FavoriteBeers extends React.Component {
 
 function select(state) {
    return {
-      visibleTodos: state.todos
+      favoriteBeers: state.beers
    }
 }
 

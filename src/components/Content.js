@@ -67,10 +67,4 @@ class Content extends React.Component {
    }
 }
 
-// function select(state) {
-//    return {
-//       visibleTodos: state.todos
-//    }
-// }
-
 export default connect()(Content);

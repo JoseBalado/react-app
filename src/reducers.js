@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 import { ADD_BEER } from './actions'
 
-function todo(state, action) {
+function beer(state, action) {
    switch (action.type) {
       case ADD_BEER:
          return {
@@ -12,18 +12,18 @@ function todo(state, action) {
          return state
    }
 }
-function todos(state = [], action) {
+function beers(state = [], action) {
    switch (action.type) {
       case ADD_BEER:
          return [
             ...state,
-            todo(undefined, action)
+            beer(undefined, action)
          ]
       default:
          return state
    }
 }
-const todoApp = combineReducers({
-   todos
+const beerApp = combineReducers({
+   beers
 })
-export default todoApp
+export default beerApp

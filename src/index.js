@@ -9,8 +9,8 @@ import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-import todoApp from './reducers'
-let store = createStore(todoApp)
+import beerApp from './reducers'
+const store = createStore(beerApp)
 
 render((
   <Provider store={store}>

@@ -6,7 +6,7 @@ export default class FavoriteList extends Component {
       console.log('this.props:', this.props)
       return (
          <ul>
-            {this.props.todos.map(beer =>
+            {this.props.beers.map(beer =>
                <Beer
                   key = {beer.id}
                   {...beer}
