@@ -13,8 +13,6 @@ class Detail extends React.Component {
                <div className="col">
                   <p>{beer.name}</p>
                </div>
-               <div className="col">
-               </div>
             </div>
             <div className="row mt-1">
                <div className="col">
@@ -22,8 +20,6 @@ class Detail extends React.Component {
                </div>
                <div className="col">
                   <p>{beer.description}</p>
-               </div>
-               <div className="col">
                </div>
             </div>
             <div className="row mt-1">

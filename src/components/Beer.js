@@ -16,8 +16,6 @@ export default class Beer extends Component {
                   Remove Beer
                </button>
             </div>
-            <div className="col">
-            </div>
        </div>
       )
    }
