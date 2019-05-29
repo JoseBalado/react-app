@@ -1,15 +1,21 @@
 import React from 'react';
 
 import { connect } from 'react-redux';
-import FavoriteList from './FavoriteList.js';
+import Beer from './Beer.js';
 
 class FavoriteBeers extends React.Component {
    render() {
       const { dispatch, favoriteBeers } = this.props
       return (
-         <div className="container">
+         <div class="container">
             <h4>Favorite Beers</h4>
-            <FavoriteList beers={favoriteBeers} dispatch={dispatch}/>
+            {favoriteBeers.map(beer =>
+               <Beer
+                  key = {beer.id}
+                  {...beer}
+                  dispatch={dispatch}
+               />
+            )}
          </div>
       );
    }
