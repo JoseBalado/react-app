@@ -29,8 +29,7 @@ class Content extends React.Component {
       const { dispatch } = this.props
       return (
          <div>
-            <h2>Content</h2>
-            <p>{this.state.message}</p>
+            <h2>{this.state.message}</h2>
             {this.state.beers.map(beer => <div key={beer.id}>
                {beer.name}
                <button onClick={(e) => dispatch(addBeer({ id: beer.id, name: beer.name}))}>Favorite Beer</button>
