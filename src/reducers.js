@@ -19,4 +19,5 @@ function beers(state = [], action) {
 const beerApp = combineReducers({
    beers
 })
+
 export default beerApp

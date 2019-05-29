@@ -15,19 +15,15 @@ class Content extends React.Component {
       }
    }
 
-  async componentDidMount() {
-     try {
-       await axios.get(`https://api.punkapi.com/v2/beers`)
-        .then(res => {
-          const beers = res.data;
-          console.log(beers);
-          this.setState({ beers });
-        })
-
-      } catch(error) {
+   async componentDidMount() {
+      try {
+         const res = await axios.get(`https://api.punkapi.com/v2/beers`)
+         const beers = res.data;
+         this.setState({ beers });
+      } catch (error) {
          console.log(error);
       }
-    }
+   }
 
    render() {
       const { dispatch } = this.props
