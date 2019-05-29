@@ -11,23 +11,9 @@ class Content extends React.Component {
 
       this.state = {
          message: 'List of beers',
-         beers: [],
-         favoriteBeers: []
+         beers: []
       }
-
-      this.favoriteBeer = this.favoriteBeer.bind(this);
    }
-
-   favoriteBeer(id) {
-      console.log('showInfo: id', id)
-      console.log(this.state.beers.filter(beer => beer.id === id)[0])
-
-      this.setState({
-         favoriteBeers: this.state.favoriteBeers.concat(this.state.beers.filter(beer => beer.id === id)[0])
-      });
-
-      console.log(this.state.favoriteBeers);
-    }
 
   async componentDidMount() {
      try {
@@ -48,7 +34,6 @@ class Content extends React.Component {
       return (
          <div>
             <h2>Content</h2>
-            <p>The content text!!!</p>
             <p>{this.state.message}</p>
             {this.state.beers.map(beer => <div key={beer.id}>
                {beer.name}
