@@ -3,7 +3,6 @@ import { removeBeer } from '../actions'
 
 export default class Beer extends Component {
    render() {
-      console.log('beer component:', this.props)
       return (
          <li>
             {this.props.name}
