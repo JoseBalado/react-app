@@ -31,17 +31,33 @@ class Content extends React.Component {
          <div>
             <h2>{this.state.message}</h2>
             {this.state.beers.map(beer => <div key={beer.id}>
-               {beer.name}
-               <button className="btn btn-primary btn-sm" onClick={(e) => dispatch(addBeer({ id: beer.id, name: beer.name}))}>Favorite Beer</button>
-               <Link 
-                  className="btn btn-outline-info btn-sm"
-                  to={{
-                     pathname: `/detail/${beer.id}`,
-                     state: {
-                     beer: beer
-                  }}}>
-                 Detailed info
-               </Link>
+
+               <div class="container">
+                  <div class="row">
+                     <div class="col-sm">
+                        {beer.name}
+                     </div>
+                     <div class="col-sm">
+                        <Link
+                           className="btn btn-outline-info btn-sm"
+                           to={{
+                              pathname: `/detail/${beer.id}`,
+                              state: {
+                              beer: beer
+                           }}}>
+                           Detailed info
+                        </Link>
+                     </div>
+                     <div class="col-sm">
+                        <button
+                           className="btn btn-primary btn-sm"
+                           onClick={(e) => dispatch(addBeer({ id: beer.id, name: beer.name}))}
+                        >
+                           Favorite Beer
+                        </button>
+                     </div>
+                  </div>
+               </div>
             </div>)}
          </div>
       );
