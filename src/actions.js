@@ -9,10 +9,10 @@ export function addBeer(beer) {
    };
 }
 
-export function removeBeer(beer) {
-   console.log('Remove beer', beer)
+export function removeBeer(id) {
+   console.log('Remove beer', id)
    return {
-      type: ADD_BEER,
-      beer
+      type: REMOVE_BEER,
+      id
    };
 }
