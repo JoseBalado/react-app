@@ -26,6 +26,8 @@ class Detail extends React.Component {
                <div class="col">
                   <img src={beer.image_url} alt="beer" />
                </div>
+               <div class="col">
+               </div>
             </div>
          </div>
       );
