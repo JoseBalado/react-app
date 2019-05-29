@@ -28,14 +28,14 @@ class Content extends React.Component {
    render() {
       const { dispatch } = this.props
       return (
-         <div class="container">
+         <div className="container">
             <h4>{this.state.message}</h4>
             {this.state.beers.map(beer => <div key={beer.id}>
-               <div class="row">
-                  <div class="col-sm">
+               <div className="row">
+                  <div className="col-sm">
                      {beer.name}
                   </div>
-                  <div class="col-sm">
+                  <div className="col-sm">
                      <Link
                         className="btn btn-outline-info btn-sm"
                         to={{
@@ -47,7 +47,7 @@ class Content extends React.Component {
                         Detailed info
                         </Link>
                   </div>
-                  <div class="col-sm">
+                  <div className="col-sm">
                      <button
                         className="btn btn-primary btn-sm"
                         onClick={(e) => dispatch(addBeer({ id: beer.id, name: beer.name }))}
