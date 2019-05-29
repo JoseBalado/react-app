@@ -1,6 +1,6 @@
-import { combineReducers } from 'redux'
-import { ADD_BEER } from './actions'
-import { REMOVE_BEER } from './actions'
+import { combineReducers } from 'redux';
+import { ADD_BEER } from './actions';
+import { REMOVE_BEER } from './actions';
 
 function beers(state = [], action) {
    switch (action.type) {
@@ -19,4 +19,4 @@ const beerApp = combineReducers({
    beers
 })
 
-export default beerApp
+export default beerApp;

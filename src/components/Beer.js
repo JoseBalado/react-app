@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { removeBeer } from '../store/actions'
+import React, { Component } from 'react';
+import { removeBeer } from '../store/actions';
 
 export default class Beer extends Component {
    render() {

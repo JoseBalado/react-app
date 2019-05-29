@@ -1,9 +1,9 @@
 import React from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
-import { connect } from 'react-redux'
-import { addBeer } from '../store/actions'
+import { connect } from 'react-redux';
+import { addBeer } from '../store/actions';
 
 class Content extends React.Component {
    constructor(props) {

@@ -1,8 +1,8 @@
-import React from 'react'
-import { Switch, Route } from 'react-router-dom'
-import Content from './Content.js'
-import Detail from './BeerDetail.js'
-import FavoriteBeers from './FavoriteBeers.js'
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import Content from './Content.js';
+import Detail from './BeerDetail.js';
+import FavoriteBeers from './FavoriteBeers.js';
 
 const Main = () => (
     <main>
@@ -14,4 +14,4 @@ const Main = () => (
     </main>
   )
   
-  export default Main
+  export default Main;

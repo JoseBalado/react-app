@@ -1,7 +1,7 @@
 
-import React from 'react'
-import { render } from 'react-dom'
-import { BrowserRouter } from 'react-router-dom'
+import React from 'react';
+import { render } from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 // import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -11,7 +11,7 @@ import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-import beerApp from './store/reducers'
+import beerApp from './store/reducers';
 const store = createStore(beerApp)
 
 render((
