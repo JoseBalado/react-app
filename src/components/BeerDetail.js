@@ -6,9 +6,29 @@ class Detail extends React.Component {
       return (
          <div>
             <h2>Beer Detail</h2>
-            <p>{beer.name}</p>
-            <p>{beer.description}</p>
-            <img src={beer.image_url} alt="beer" />
+            <div class="container">
+               <div class="row">
+                  <div class="col">
+                    Name:
+                  </div>
+                  <div class="col">
+                     <p>{beer.name}</p>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col">
+                     Description:
+                  </div>
+                  <div class="col">
+                     <p>{beer.description}</p>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col">
+                     <img src={beer.image_url} alt="beer" />
+                  </div>
+               </div>
+            </div>
          </div>
       );
    }
