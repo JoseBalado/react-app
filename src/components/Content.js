@@ -32,7 +32,7 @@ class Content extends React.Component {
             <h2>{this.state.message}</h2>
             {this.state.beers.map(beer => <div key={beer.id}>
                {beer.name}
-               <button onClick={(e) => dispatch(addBeer({ id: beer.id, name: beer.name}))}>Favorite Beer</button>
+               <button className="btn btn-primary btn-sm" onClick={(e) => dispatch(addBeer({ id: beer.id, name: beer.name}))}>Favorite Beer</button>
                <Link 
                   to={{
                      pathname: `/detail/${beer.id}`,
