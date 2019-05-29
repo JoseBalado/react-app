@@ -6,7 +6,12 @@ export default class Beer extends Component {
       return (
          <li>
             {this.props.name}
-            <button className="btn btn-danger btn-sm" onClick={(e) => this.props.dispatch(removeBeer(this.props.id))}>Remove Beer</button>
+            <button
+               className="btn btn-danger btn-sm"
+               onClick={(e) => this.props.dispatch(removeBeer(this.props.id))}
+            >
+               Remove Beer
+            </button>
          </li>
       )
    }
