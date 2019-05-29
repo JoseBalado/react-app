@@ -28,33 +28,32 @@ class Content extends React.Component {
    render() {
       const { dispatch } = this.props
       return (
-         <div>
-            <h2>{this.state.message}</h2>
+         <div class="container">
+            <h4>{this.state.message}</h4>
             {this.state.beers.map(beer => <div key={beer.id}>
-               <div class="container">
-                  <div class="row">
-                     <div class="col-sm">
-                        {beer.name}
-                     </div>
-                     <div class="col-sm">
-                        <Link
-                           className="btn btn-outline-info btn-sm"
-                           to={{
-                              pathname: `/detail/${beer.id}`,
-                              state: {
+               <div class="row">
+                  <div class="col-sm">
+                     {beer.name}
+                  </div>
+                  <div class="col-sm">
+                     <Link
+                        className="btn btn-outline-info btn-sm"
+                        to={{
+                           pathname: `/detail/${beer.id}`,
+                           state: {
                               beer: beer
-                           }}}>
-                           Detailed info
+                           }
+                        }}>
+                        Detailed info
                         </Link>
-                     </div>
-                     <div class="col-sm">
-                        <button
-                           className="btn btn-primary btn-sm"
-                           onClick={(e) => dispatch(addBeer({ id: beer.id, name: beer.name}))}
-                        >
-                           Favorite Beer
+                  </div>
+                  <div class="col-sm">
+                     <button
+                        className="btn btn-primary btn-sm"
+                        onClick={(e) => dispatch(addBeer({ id: beer.id, name: beer.name }))}
+                     >
+                        Favorite Beer
                         </button>
-                     </div>
                   </div>
                </div>
             </div>)}
