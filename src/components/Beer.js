@@ -4,7 +4,7 @@ import { removeBeer } from '../store/actions';
 export default class Beer extends Component {
    render() {
       return (
-         <div className="row">
+         <div className="row mt-1">
             <div className="col">
                {this.props.name}
             </div>
