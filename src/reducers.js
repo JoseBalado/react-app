@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux'
 import { ADD_BEER } from './actions'
+import { REMOVE_BEER } from './actions'
 
 function beer(state, action) {
    switch (action.type) {
@@ -23,6 +24,19 @@ function beers(state = [], action) {
          return state
    }
 }
+
+function removeBeer(state, action) {
+   switch (action.type) {
+      case REMOVE_BEER:
+         return [
+            ...state,
+            beer(undefined, action)
+         ]
+      default:
+         return state
+   }
+}
+
 const beerApp = combineReducers({
    beers
 })
