@@ -27,5 +27,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Tested with:
 Linux Mint 18.3 64-bit
+
 Google Chrome Version 74.0.3729.169 (Official Build) (64-bit)
+
 yarn 1.15.2
