@@ -4,10 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `yarn install`
+### `npm install`
 Installs the dependencies of the project.
 
-### `yarn start`
+### `npm start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -27,7 +27,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Tested with:
 Linux Mint 18.3 64-bit
-
+Node v12.4.0
 Google Chrome Version 74.0.3729.169 (Official Build) (64-bit)
-
 yarn 1.15.2

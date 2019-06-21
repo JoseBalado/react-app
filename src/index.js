@@ -1,28 +1,18 @@
+import React from 'react'
+import { render } from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
+import * as serviceWorker from './serviceWorker'
 
-import React from 'react';
-import { render } from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-// import './index.css';
-import 'bootstrap/dist/css/bootstrap.css';
-
-import App from './components/App.js';
-import * as serviceWorker from './serviceWorker';
-
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-
-import beerApp from './store/reducers';
-const store = createStore(beerApp)
+import 'bootstrap/dist/css/bootstrap.css'
+import App from './components/App.js'
 
 render((
-  <Provider store={store}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </Provider>
-), document.getElementById('root'));
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+), document.getElementById('root'))
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+serviceWorker.unregister()

@@ -1,30 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react'
+import { FavoriteContext } from '../context/context.js'
+import Beer from './Beer.js'
 
-import { connect } from 'react-redux';
-import Beer from './Beer.js';
+const FavoriteBeers = props => {
+  const { favoriteBeers, favoriteDispatch } = useContext(FavoriteContext)
 
-class FavoriteBeers extends React.Component {
-   render() {
-      const { dispatch, favoriteBeers } = this.props
-      return (
-         <div className="container">
-            <h4>Favorite Beers</h4>
-            {favoriteBeers.map(beer =>
-               <Beer
-                  key = {beer.id}
-                  {...beer}
-                  dispatch={dispatch}
-               />
-            )}
-         </div>
-      );
-   }
+  return (
+    <div className='container'>
+      <h4>Favorite Beers</h4>
+      {favoriteBeers.map(beer =>
+        <Beer
+          key={beer.id}
+          {...beer}
+          dispatch={favoriteDispatch}
+        />
+      )}
+    </div>
+  )
 }
 
-function mapStateToProps(state) {
-   return {
-      favoriteBeers: state.beers
-   }
-}
-
-export default connect(mapStateToProps)(FavoriteBeers);
+export default FavoriteBeers

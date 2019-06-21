@@ -1,22 +1,19 @@
-import React, { Component } from 'react';
-import { removeBeer } from '../store/actions';
+import React from 'react'
 
-export default class Beer extends Component {
-   render() {
-      return (
-         <div className="row mt-1">
-            <div className="col">
-               {this.props.name}
-            </div>
-            <div className="col">
-               <button
-                  className="btn btn-danger btn-sm"
-                  onClick={(e) => this.props.dispatch(removeBeer(this.props.id))}
-               >
-                  Remove Beer
-               </button>
-            </div>
-       </div>
-      )
-   }
-}
+const Beer = props => (
+  <div className='row mt-1'>
+    <div className='col'>
+      {props.name}
+    </div>
+    <div className='col'>
+      <button
+        className='btn btn-danger btn-sm'
+        onClick={(e) => props.dispatch({ type: 'REMOVE_BEER', beer: { id: props.id } })}
+      >
+        Remove Beer
+      </button>
+    </div>
+  </div>
+)
+
+export default Beer

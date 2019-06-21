@@ -1,16 +1,17 @@
-import React from 'react';
-import Header from './Header.js';
-import Main from './Main.js';
+import React from 'react'
+import Header from './Header.js'
+import Main from './Main.js'
+import { FavoriteProvider } from '../context/context.js'
 
-class App extends React.Component {
-   render() {
-      return (
-         <div>
-            <Header/>
-            <Main />
-         </div>
-      );
-   }
+const App = () => {
+  return (
+    <div>
+      <FavoriteProvider>
+        <Header />
+        <Main />
+      </FavoriteProvider>
+    </div>
+  )
 }
 
-export default App;
+export default App
