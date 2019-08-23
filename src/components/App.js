@@ -2,15 +2,16 @@ import React from 'react'
 import Header from './Header.js'
 import Main from './Main.js'
 import { FavoriteProvider } from '../context/context.js'
+import Container from '@material-ui/core/Container'
 
 const App = () => {
   return (
-    <div>
-      <FavoriteProvider>
+    <FavoriteProvider>
+      <Container fixed>
         <Header />
         <Main />
-      </FavoriteProvider>
-    </div>
+      </Container>
+    </FavoriteProvider>
   )
 }
 
